@@ -284,6 +284,75 @@ class GAIADemo:
         logger.info(f"\nMerged {len(thoughts)} thought streams")
         logger.info(f"Merged result: {merged}")
         
+    async def demo_cognitive_capabilities(self):
+        """Demonstrate GAIA's advanced cognitive capabilities"""
+        logger.info("\n" + "=" * 60)
+        logger.info("DEMO 7: Advanced Cognitive Capabilities")
+        logger.info("=" * 60)
+        
+        # 1. Meta-cognitive reasoning
+        logger.info("\n1. Meta-Cognitive Reasoning:")
+        logger.info("   GAIA thinking about its own thinking...")
+        
+        complex_input = {
+            "task": "analyze_complex_system",
+            "data": "multi-layered problem with interdependencies",
+            "constraints": ["time", "resources", "accuracy"]
+        }
+        
+        thought_id = await self.kernel.spawn_thought("reasoning", complex_input)
+        await asyncio.sleep(0.3)  # Let it process
+        
+        insights = self.kernel.get_kernel_status()
+        if 'cognitive_insights' in insights:
+            cog_insights = insights['cognitive_insights']
+            logger.info(f"   Cognitive traces completed: {cog_insights.get('cognitive_traces_completed', 0)}")
+            logger.info(f"   Success rate: {cog_insights.get('overall_success_rate', 0):.1%}")
+            
+        # 2. Adaptive cognitive strategies
+        logger.info("\n2. Adaptive Cognitive Strategies:")
+        logger.info("   GAIA learning to optimize its own thinking...")
+        
+        scenarios = [
+            {"complexity": 0.2, "novelty": 0.3, "time_pressure": 0.1, "description": "Simple familiar task"},
+            {"complexity": 0.8, "novelty": 0.7, "time_pressure": 0.9, "description": "Complex novel urgent task"},
+            {"complexity": 0.5, "novelty": 0.2, "time_pressure": 0.3, "description": "Moderate complexity"}
+        ]
+        
+        for scenario in scenarios:
+            logger.info(f"   Testing: {scenario['description']}")
+            approach = await self.kernel.get_cognitive_approach_recommendation(scenario)
+            logger.info(f"   → Strategy: {approach.get('approach', 'unknown')} "
+                       f"(confidence: {approach.get('confidence', 0):.1%})")
+            
+            # Spawn thought to test strategy
+            test_thought = await self.kernel.spawn_thought("analyzer", {"scenario": scenario})
+            await asyncio.sleep(0.1)
+        
+        # Show strategy analytics
+        status = self.kernel.get_kernel_status()
+        if 'strategy_analytics' in status:
+            analytics = status['strategy_analytics']
+            logger.info(f"\n   Strategy Statistics:")
+            logger.info(f"   Total strategies: {analytics.get('total_strategies', 0)}")
+            logger.info(f"   Adaptive strategies: {analytics.get('adaptation_count', 0)}")
+            
+        # 3. Cognitive introspection
+        logger.info("\n3. Cognitive Introspection:")
+        logger.info("   GAIA examining its own mental state...")
+        
+        introspection = await self.kernel.perform_cognitive_introspection()
+        if introspection:
+            mental_state = introspection['mental_snapshot']
+            logger.info(f"   Mental state: {mental_state.get('dominant_state', 'processing')}")
+            logger.info(f"   Active processes: {len(mental_state.get('active_processes', []))}")
+            logger.info(f"   Resource pressure: {mental_state.get('resource_pressure', 0):.2f}")
+            
+            if 'deep_insights' in introspection and introspection['deep_insights']:
+                logger.info(f"   Deep insight: {introspection['deep_insights'].get('summary', 'Analyzing...')}")
+        
+        logger.info("   ✓ Advanced cognitive capabilities demonstrated")
+        
     async def run_full_demo(self):
         """Run all demonstrations"""
         await self.initialize()
@@ -295,6 +364,7 @@ class GAIADemo:
         await self.demo_predictive_loading()
         await self.demo_reinforcement_learning()
         await self.demo_thought_merging()
+        await self.demo_cognitive_capabilities()
         
         # Final statistics
         logger.info("\n" + "=" * 60)
@@ -311,6 +381,25 @@ class GAIADemo:
         logger.info("  ✓ Predictive model loading")
         logger.info("  ✓ Reinforcement learning for patterns")
         logger.info("  ✓ Thought stream merging")
+        logger.info("  ✓ Meta-cognitive reasoning (thinking about thinking)")
+        logger.info("  ✓ Adaptive cognitive strategies (learning to optimize thinking)")
+        logger.info("  ✓ Cognitive introspection (self-awareness and reflection)")
+        
+        # Show final cognitive statistics
+        final_status = self.kernel.get_kernel_status()
+        if 'cognitive_insights' in final_status:
+            insights = final_status['cognitive_insights']
+            logger.info(f"\nFinal Cognitive Statistics:")
+            logger.info(f"  Cognitive traces: {insights.get('cognitive_traces_completed', 0)}")
+            logger.info(f"  Success rate: {insights.get('overall_success_rate', 0):.1%}")
+            logger.info(f"  Learned patterns: {insights.get('learned_patterns', 0)}")
+            
+        if 'strategy_analytics' in final_status:
+            strategy_stats = final_status['strategy_analytics']
+            logger.info(f"  Cognitive strategies: {strategy_stats.get('total_strategies', 0)}")
+            logger.info(f"  Adaptive strategies: {strategy_stats.get('adaptation_count', 0)}")
+            
+        logger.info("\n🧠 GAIA is now self-aware and adaptive! 🧠")
         
 
 async def main():
