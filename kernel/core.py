@@ -9,6 +9,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 import uuid
 import logging
+from .fault_tolerance import FaultToleranceManager, ErrorSeverity, ResourceExhaustedError
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -81,18 +82,36 @@ class GAIAKernel:
         self.thought_streams: Dict[str, asyncio.Task] = {}
         self.event_loop: Optional[asyncio.AbstractEventLoop] = None
         
+        # Fault tolerance
+        self.fault_manager = FaultToleranceManager()
+        self.max_models = 50  # Resource bounds
+        self.max_contexts = 100
+        self.max_thought_streams = 20
+        
     async def initialize(self):
         """Initialize the kernel and start the event loop"""
         logger.info("Initializing GAIA Kernel...")
         self.event_loop = asyncio.get_event_loop()
         self.active_context = CognitiveContext()
         self.contexts[self.active_context.context_id] = self.active_context
+        
+        # Register core components with fault tolerance
+        self.fault_manager.register_component(
+            "kernel", 
+            recovery_handler=self._recover_kernel,
+            degradation_handler=self._degrade_kernel
+        )
+        
         logger.info(f"GAIA Kernel initialized with context {self.active_context.context_id}")
         
     def register_model(self, model_id: str, model_type: str, 
                       memory_footprint: int, vram_required: int,
                       semantic_tags: Optional[Set[str]] = None):
         """Register a new model with the kernel"""
+        # Check resource bounds
+        if len(self.models) >= self.max_models:
+            raise ResourceExhaustedError(f"Cannot register model: max models ({self.max_models}) exceeded")
+            
         model = ModelInstance(
             model_id=model_id,
             model_type=model_type,
@@ -101,6 +120,10 @@ class GAIAKernel:
             semantic_tags=semantic_tags or set()
         )
         self.models[model_id] = model
+        
+        # Register model with fault tolerance
+        self.fault_manager.register_component(model_id)
+        
         logger.info(f"Registered model {model_id} of type {model_type}")
         
     def create_association(self, model_a: str, model_b: str, strength: float = 1.0):
@@ -186,7 +209,7 @@ class GAIAKernel:
         
     def get_kernel_status(self) -> Dict[str, Any]:
         """Get current kernel status"""
-        return {
+        status = {
             "active_models": sum(1 for m in self.models.values() if m.state == ModelState.ACTIVE),
             "total_models": len(self.models),
             "active_thoughts": len([t for t in self.thought_streams.values() if not t.done()]),
@@ -194,3 +217,64 @@ class GAIAKernel:
             "total_attention": self.attention_pool,
             "contexts": len(self.contexts)
         }
+        
+        # Add fault tolerance info
+        health_report = self.fault_manager.get_system_health_report()
+        status["health"] = health_report["overall_health"]
+        status["component_health"] = health_report["components"]
+        
+        return status
+        
+    async def _recover_kernel(self):
+        """Recover kernel from error state"""
+        logger.info("Attempting kernel recovery...")
+        
+        # Clear failed thought streams
+        failed_streams = [tid for tid, task in self.thought_streams.items() if task.done() and task.exception()]
+        for tid in failed_streams:
+            del self.thought_streams[tid]
+            
+        # Reset attention pool if corrupted
+        if self.available_attention < 0 or self.available_attention > self.attention_pool:
+            self.available_attention = self.attention_pool
+            logger.info("Reset attention pool")
+            
+        # Cleanup orphaned contexts
+        active_context_ids = {self.active_context.context_id} if self.active_context else set()
+        orphaned = set(self.contexts.keys()) - active_context_ids
+        for context_id in orphaned:
+            if len(self.contexts[context_id].child_contexts) == 0:  # No children
+                del self.contexts[context_id]
+                
+        logger.info("Kernel recovery completed")
+        
+    async def _degrade_kernel(self, reason: str):
+        """Gracefully degrade kernel functionality"""
+        logger.warning(f"Kernel degradation triggered: {reason}")
+        
+        if reason == "shutdown":
+            # Cancel all active thought streams
+            for task in self.thought_streams.values():
+                if not task.done():
+                    task.cancel()
+            
+            # Clear all contexts except active
+            if self.active_context:
+                self.contexts = {self.active_context.context_id: self.active_context}
+            else:
+                self.contexts.clear()
+                
+            logger.info("Kernel shutdown completed")
+        else:
+            # Reduce resource limits
+            self.max_models = max(10, self.max_models // 2)
+            self.max_contexts = max(20, self.max_contexts // 2)
+            self.max_thought_streams = max(5, self.max_thought_streams // 2)
+            
+            logger.info(f"Reduced resource limits: models={self.max_models}, contexts={self.max_contexts}")
+            
+    async def execute_with_fault_tolerance(self, operation_name: str, operation: callable, *args, **kwargs):
+        """Execute operation with fault tolerance wrapper"""
+        return await self.fault_manager.execute_with_fault_tolerance(
+            "kernel", operation, *args, **kwargs
+        )

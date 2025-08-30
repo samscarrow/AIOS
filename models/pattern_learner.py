@@ -3,7 +3,7 @@ Pattern Learner - Reinforcement learning for model loading patterns
 """
 
 import numpy as np
-from typing import Dict, List, Tuple, Optional, Any
+from typing import Dict, List, Tuple, Optional, Any, Set
 from dataclasses import dataclass, field
 import time
 from collections import defaultdict

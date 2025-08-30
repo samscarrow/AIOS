@@ -4,7 +4,7 @@ Async Thought Executor - Enables parallel, branching thought streams
 
 import asyncio
 import uuid
-from typing import Dict, List, Any, Optional, Callable, Set
+from typing import Dict, List, Any, Optional, Callable, Set, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
 import time
