@@ -1,0 +1,577 @@
+[
+  {
+    "task": "Write a Python function that implements binary search on a sorted array",
+    "routing": {
+      "task_type": "code generation",
+      "complexity": "trivial",
+      "domain": null,
+      "confidence": 0.9735903739929199,
+      "abstain": false,
+      "routing_time_ms": 1133.9497999942978,
+      "routing_path": "semantic->zeroshot",
+      "recommended_models": [],
+      "metadata": {
+        "cognitive_type": null,
+        "confidence": 0.1684652417898178,
+        "margin": 0.06676161289215088,
+        "abstain": false,
+        "complexity": "trivial task",
+        "alternatives": [
+          {
+            "label": "code_generation",
+            "score": 0.1684652417898178
+          },
+          {
+            "label": "documentation",
+            "score": 0.10170362889766693
+          },
+          {
+            "label": "debugging",
+            "score": 0.10086136311292648
+          }
+        ],
+        "routing_time_ms": 1088.075799998478,
+        "drift_score": 0.0,
+        "primary_type": "code generation",
+        "all_types": [
+          [
+            "code generation",
+            0.9735903739929199
+          ],
+          [
+            "bug fixing",
+            0.017714351415634155
+          ],
+          [
+            "performance analysis",
+            0.0047427876852452755
+          ],
+          [
+            "system design",
+            0.0038742786273360252
+          ],
+          [
+            "data analysis",
+            0.0011066680308431387
+          ]
+        ],
+        "task_confidence": 0.9735903739929199,
+        "complexity_confidence": 0.5486319661140442
+      }
+    },
+    "stream": {
+      "stream_id": "ts_0f0bb2c8",
+      "status": "success",
+      "message": "Thought stream ts_0f0bb2c8 initiated with intelligent routing",
+      "cognitive_task": {
+        "task_id": "db96c99a",
+        "description": "Write a Python function that implements binary search on a sorted array",
+        "cognitive_type": "code generation",
+        "complexity": "trivial",
+        "attention_weight": 0.2,
+        "semantic_context": {
+          "tags": [],
+          "domain": "code generation"
+        },
+        "expected_duration": null,
+        "recommended_models": [
+          "qwen/qwen2.5-7b"
+        ],
+        "routing_confidence": 0.9735903739929199,
+        "routing_path": "semantic->zeroshot"
+      },
+      "attention_allocated": 0.2,
+      "recommended_models": [
+        "qwen/qwen2.5-7b"
+      ],
+      "routing_metadata": {
+        "router_type": "code generation",
+        "router_complexity": "trivial",
+        "confidence": 0.9735903739929199,
+        "routing_time_ms": 959.8412999985158,
+        "routing_path": "semantic->zeroshot",
+        "abstained": false,
+        "alternatives": [
+          {
+            "label": "code_generation",
+            "score": 0.1684652417898178
+          },
+          {
+            "label": "documentation",
+            "score": 0.10170362889766693
+          },
+          {
+            "label": "debugging",
+            "score": 0.10086136311292648
+          }
+        ]
+      }
+    },
+    "lmstudio": {
+      "success": true,
+      "response": "\n\nHere's a Python function implementing binary search on a sorted array:\n\n```python\ndef binary_search(arr, target):\n    \"\"\"\n    Perform binary search on a sorted array to find the index of the target value.\n    \n    Parameters:\n    arr (list): A sorted list of elements (ascending order).\n    target: The value to search for in the array.\n    \n    Returns:\n    int: The index of the target if found, otherwise -1.\n    \"\"\"\n    low = 0\n    high = len(arr) - 1\n    \n    while low <= high:\n        mid = (low + high) // 2\n        \n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    \n    return",
+      "model_used": "qwen/qwen3-8b",
+      "timestamp": "2025-09-01T12:46:50.112800"
+    }
+  },
+  {
+    "task": "Debug why my REST API returns 500 errors when handling concurrent requests",
+    "routing": {
+      "task_type": "code generation",
+      "complexity": "trivial",
+      "domain": null,
+      "confidence": 0.9975034594535828,
+      "abstain": false,
+      "routing_time_ms": 995.8397000009427,
+      "routing_path": "semantic->zeroshot",
+      "recommended_models": [],
+      "metadata": {
+        "cognitive_type": null,
+        "confidence": 0.26905328035354614,
+        "margin": 0.08780476450920105,
+        "abstain": false,
+        "complexity": "trivial task",
+        "alternatives": [
+          {
+            "label": "debugging",
+            "score": 0.26905328035354614
+          },
+          {
+            "label": "analysis",
+            "score": 0.1812485158443451
+          },
+          {
+            "label": "refactoring",
+            "score": 0.1537613868713379
+          }
+        ],
+        "routing_time_ms": 962.4473000003491,
+        "drift_score": 0.0,
+        "primary_type": "code generation",
+        "all_types": [
+          [
+            "code generation",
+            0.9975034594535828
+          ],
+          [
+            "bug fixing",
+            0.19594109058380127
+          ],
+          [
+            "performance analysis",
+            0.08615459501743317
+          ],
+          [
+            "system design",
+            0.056574977934360504
+          ],
+          [
+            "data analysis",
+            0.006241797935217619
+          ]
+        ],
+        "task_confidence": 0.9975034594535828,
+        "complexity_confidence": 0.5574663877487183
+      }
+    },
+    "stream": {
+      "stream_id": "ts_298613ec",
+      "status": "success",
+      "message": "Thought stream ts_298613ec initiated with intelligent routing",
+      "cognitive_task": {
+        "task_id": "f88ca6d2",
+        "description": "Debug why my REST API returns 500 errors when handling concurrent requests",
+        "cognitive_type": "code generation",
+        "complexity": "trivial",
+        "attention_weight": 0.2,
+        "semantic_context": {
+          "tags": [],
+          "domain": "code generation"
+        },
+        "expected_duration": null,
+        "recommended_models": [
+          "qwen/qwen2.5-7b"
+        ],
+        "routing_confidence": 0.9975034594535828,
+        "routing_path": "semantic->zeroshot"
+      },
+      "attention_allocated": 0.2,
+      "recommended_models": [
+        "qwen/qwen2.5-7b"
+      ],
+      "routing_metadata": {
+        "router_type": "code generation",
+        "router_complexity": "trivial",
+        "confidence": 0.9975034594535828,
+        "routing_time_ms": 962.6610999985132,
+        "routing_path": "semantic->zeroshot",
+        "abstained": false,
+        "alternatives": [
+          {
+            "label": "debugging",
+            "score": 0.26905328035354614
+          },
+          {
+            "label": "analysis",
+            "score": 0.1812485158443451
+          },
+          {
+            "label": "refactoring",
+            "score": 0.1537613868713379
+          }
+        ]
+      }
+    },
+    "lmstudio": {
+      "success": true,
+      "response": "\n\nA 500 Internal Server Error during high concurrency typically indicates an unhandled exception or resource contention in your backend. Here's a structured approach to debug this issue:\n\n---\n\n### **1. Check for Thread Safety Issues**\n- **Race Conditions**: If shared resources (e.g., databases, caches) are accessed without proper synchronization, concurrent requests may corrupt data or cause deadlocks.\n  - Example: A database connection pool that isn't thread-safe.\n  - **Fix**: Use synchronized blocks/methods, or rely on thread-safe libraries (e.g., `ConcurrentHashMap` in Java).\n- **Stateful Operations**: Avoid maintaining state per request unless explicitly needed. Use stateless designs where possible.\n\n---\n\n### **2. Inspect Database Connection Management**\n- **Connection Pool Exhaustion**:\n  - If your app uses a small connection pool and concurrent requests exceed the limit, it may fail to acquire connections.\n  - **Fix**: Increase the pool size (e.g., `maxPoolSize` in HikariCP) or optimize queries to reduce connection usage.\n- **Database Deadlocks**:\n  - Concurrent transactions might conflict on locks. Use tools like `SHOW ENGINE INNODB STATUS` (MySQL) to diagnose deadlocks.\n\n---\n\n### **3. Handle Exceptions Gracefully**\n- **Uncaught Exceptions**: Ensure all database calls, external API invocations, and business logic are wrapped in try-catch blocks.\n  - Example: A failed HTTP call to an external service without a fallback could crash the server.\n  - **Fix**: Use `@ControllerAdvice` (Spring) or global error handlers to catch exceptions and return meaningful 500 responses.\n\n---\n\n### **4. Resource Leaks**\n- **Open Files/Connections**: If resources like file handles, sockets, or database connections aren't closed properly, they may exhaust system limits under load.\n  - **Fix**: Use `try-with-resources` (Java) or ensure all resources are explicitly closed.\n- **Memory Leaks**: Tools like `jstat`, `jmap`, or profilers (e.g., VisualVM) can detect memory leaks.\n\n---\n\n### **5. External Dependencies**\n- **Third-Party Services**: If your API relies on external APIs, rate limiting or timeouts could cause cascading failures.\n  -",
+      "model_used": "qwen/qwen3-8b",
+      "timestamp": "2025-09-01T12:47:03.068534"
+    }
+  },
+  {
+    "task": "Design a microservices architecture for an e-commerce platform with 10M daily users",
+    "routing": {
+      "task_type": "code generation",
+      "complexity": "trivial",
+      "domain": null,
+      "confidence": 0.9348611831665039,
+      "abstain": false,
+      "routing_time_ms": 1011.3741000022856,
+      "routing_path": "semantic->zeroshot",
+      "recommended_models": [],
+      "metadata": {
+        "cognitive_type": null,
+        "confidence": 0.3073709309101105,
+        "margin": 0.06521430611610413,
+        "abstain": false,
+        "complexity": "trivial task",
+        "alternatives": [
+          {
+            "label": "system_design",
+            "score": 0.3073709309101105
+          },
+          {
+            "label": "refactoring",
+            "score": 0.24215662479400635
+          },
+          {
+            "label": "analysis",
+            "score": 0.23165678977966309
+          }
+        ],
+        "routing_time_ms": 959.1516000000411,
+        "drift_score": 0.0,
+        "primary_type": "code generation",
+        "all_types": [
+          [
+            "code generation",
+            0.9348611831665039
+          ],
+          [
+            "bug fixing",
+            0.7976338267326355
+          ],
+          [
+            "performance analysis",
+            0.34326040744781494
+          ],
+          [
+            "system design",
+            0.10588747262954712
+          ],
+          [
+            "data analysis",
+            0.07627011090517044
+          ]
+        ],
+        "task_confidence": 0.9348611831665039,
+        "complexity_confidence": 0.5166563987731934
+      }
+    },
+    "stream": {
+      "stream_id": "ts_c8964a10",
+      "status": "success",
+      "message": "Thought stream ts_c8964a10 initiated with intelligent routing",
+      "cognitive_task": {
+        "task_id": "445a61ec",
+        "description": "Design a microservices architecture for an e-commerce platform with 10M daily users",
+        "cognitive_type": "code generation",
+        "complexity": "trivial",
+        "attention_weight": 0.2,
+        "semantic_context": {
+          "tags": [],
+          "domain": "code generation"
+        },
+        "expected_duration": null,
+        "recommended_models": [
+          "qwen/qwen2.5-7b"
+        ],
+        "routing_confidence": 0.9348611831665039,
+        "routing_path": "semantic->zeroshot"
+      },
+      "attention_allocated": 0.2,
+      "recommended_models": [
+        "qwen/qwen2.5-7b"
+      ],
+      "routing_metadata": {
+        "router_type": "code generation",
+        "router_complexity": "trivial",
+        "confidence": 0.9348611831665039,
+        "routing_time_ms": 1008.7305000051856,
+        "routing_path": "semantic->zeroshot",
+        "abstained": false,
+        "alternatives": [
+          {
+            "label": "system_design",
+            "score": 0.3073709309101105
+          },
+          {
+            "label": "refactoring",
+            "score": 0.24215662479400635
+          },
+          {
+            "label": "analysis",
+            "score": 0.23165678977966309
+          }
+        ]
+      }
+    },
+    "lmstudio": {
+      "success": true,
+      "response": "\n\nDesigning a microservices architecture for an e-commerce platform with **10 million daily users** requires careful planning to ensure scalability, fault tolerance, and performance. Below is a structured approach:\n\n---\n\n### **1. Core Microservices Breakdown**\nEach service should be decoupled, focused on a single responsibility, and scalable:\n- **Product Catalog Service**: Manages product data (inventory, descriptions, pricing).\n- **User Management Service**: Handles user registration, authentication, and profile management.\n- **Order Processing Service**: Manages order creation, validation, and status tracking.\n- **Payment Gateway Service**: Processes payments via third-party APIs (e.g., Stripe, PayPal).\n- **Inventory Management Service**: Tracks stock levels and manages replenishment.\n- **Search & Recommendations Service**: Implements search functionality and personalized recommendations.\n- **Customer Support Service**: Handles chatbots, ticketing, and FAQs.\n- **Analytics & Reporting Service**: Aggregates user behavior, sales data, and metrics.\n- **Marketing & Promotions Service**: Manages coupons, discounts, and campaigns.\n- **Notification Service**: Sends emails, SMS, or in-app notifications (e.g., order confirmations).\n- **File Storage/CDN Service**: Stores product images, videos, and serves them via a CDN.\n\n---\n\n### **2. Communication Strategy**\n- **Synchronous APIs**: Use **REST/gRPC** for real-time interactions (e.g., user authentication, payment processing",
+      "model_used": "qwen/qwen3-8b",
+      "timestamp": "2025-09-01T12:47:16.081942"
+    }
+  },
+  {
+    "task": "Analyze the time complexity of quicksort vs mergesort for different data distributions",
+    "routing": {
+      "task_type": null,
+      "complexity": "trivial",
+      "domain": null,
+      "confidence": 0.12938080728054047,
+      "abstain": true,
+      "routing_time_ms": 1099.807200000214,
+      "routing_path": "semantic->zeroshot",
+      "recommended_models": [],
+      "metadata": {
+        "cognitive_type": null,
+        "confidence": 0.31109747290611267,
+        "margin": 0.0665663331747055,
+        "abstain": true,
+        "complexity": "trivial task",
+        "alternatives": [
+          {
+            "label": "system_design",
+            "score": 0.31109747290611267
+          },
+          {
+            "label": "analysis",
+            "score": 0.24453113973140717
+          },
+          {
+            "label": "code_generation",
+            "score": 0.22014187276363373
+          }
+        ],
+        "routing_time_ms": 1021.9749000025331,
+        "drift_score": 0.0,
+        "primary_type": null,
+        "all_types": [
+          [
+            "code generation",
+            0.12938080728054047
+          ],
+          [
+            "bug fixing",
+            0.05399544537067413
+          ],
+          [
+            "performance analysis",
+            0.05180945247411728
+          ],
+          [
+            "system design",
+            0.03023376502096653
+          ],
+          [
+            "data analysis",
+            0.011716477572917938
+          ]
+        ],
+        "task_confidence": 0.12938080728054047,
+        "complexity_confidence": 0.7461203932762146
+      }
+    },
+    "stream": {
+      "stream_id": "ts_02e977ec",
+      "status": "success",
+      "message": "Thought stream ts_02e977ec initiated with intelligent routing",
+      "cognitive_task": {
+        "task_id": "b802432f",
+        "description": "Analyze the time complexity of quicksort vs mergesort for different data distributions",
+        "cognitive_type": "reasoning",
+        "complexity": "trivial",
+        "attention_weight": 0.2,
+        "semantic_context": {
+          "tags": [],
+          "domain": "reasoning"
+        },
+        "expected_duration": null,
+        "recommended_models": [
+          "qwen/qwen2.5-7b"
+        ],
+        "routing_confidence": 0.12938080728054047,
+        "routing_path": "semantic->zeroshot"
+      },
+      "attention_allocated": 0.2,
+      "recommended_models": [
+        "qwen/qwen2.5-7b"
+      ],
+      "routing_metadata": {
+        "router_type": null,
+        "router_complexity": "trivial",
+        "confidence": 0.12938080728054047,
+        "routing_time_ms": 1023.7492000014754,
+        "routing_path": "semantic->zeroshot",
+        "abstained": true,
+        "alternatives": [
+          {
+            "label": "system_design",
+            "score": 0.31109747290611267
+          },
+          {
+            "label": "analysis",
+            "score": 0.24453113973140717
+          },
+          {
+            "label": "code_generation",
+            "score": 0.22014187276363373
+          }
+        ]
+      }
+    },
+    "lmstudio": {
+      "success": true,
+      "response": "",
+      "model_used": "qwen/qwen3-8b",
+      "timestamp": "2025-09-01T12:47:29.092637"
+    }
+  },
+  {
+    "task": "Document the authentication flow for a JWT-based API system",
+    "routing": {
+      "task_type": null,
+      "complexity": "trivial",
+      "domain": null,
+      "confidence": 0.2581520974636078,
+      "abstain": true,
+      "routing_time_ms": 1028.0015999960597,
+      "routing_path": "semantic->zeroshot",
+      "recommended_models": [],
+      "metadata": {
+        "cognitive_type": null,
+        "confidence": 0.3377440571784973,
+        "margin": 0.03794121742248535,
+        "abstain": true,
+        "complexity": "trivial task",
+        "alternatives": [
+          {
+            "label": "documentation",
+            "score": 0.3377440571784973
+          },
+          {
+            "label": "analysis",
+            "score": 0.29980283975601196
+          },
+          {
+            "label": "code_generation",
+            "score": 0.29452431201934814
+          }
+        ],
+        "routing_time_ms": 972.3928999956115,
+        "drift_score": 0.0,
+        "primary_type": null,
+        "all_types": [
+          [
+            "code generation",
+            0.2581520974636078
+          ],
+          [
+            "bug fixing",
+            0.23247146606445312
+          ],
+          [
+            "performance analysis",
+            0.11538747698068619
+          ],
+          [
+            "system design",
+            0.06354443728923798
+          ],
+          [
+            "data analysis",
+            0.03502292558550835
+          ]
+        ],
+        "task_confidence": 0.2581520974636078,
+        "complexity_confidence": 0.7433339357376099
+      }
+    },
+    "stream": {
+      "stream_id": "ts_3e4ec3be",
+      "status": "success",
+      "message": "Thought stream ts_3e4ec3be initiated with intelligent routing",
+      "cognitive_task": {
+        "task_id": "c67f9e49",
+        "description": "Document the authentication flow for a JWT-based API system",
+        "cognitive_type": "reasoning",
+        "complexity": "trivial",
+        "attention_weight": 0.2,
+        "semantic_context": {
+          "tags": [],
+          "domain": "reasoning"
+        },
+        "expected_duration": null,
+        "recommended_models": [
+          "qwen/qwen2.5-7b"
+        ],
+        "routing_confidence": 0.2581520974636078,
+        "routing_path": "semantic->zeroshot"
+      },
+      "attention_allocated": 0.2,
+      "recommended_models": [
+        "qwen/qwen2.5-7b"
+      ],
+      "routing_metadata": {
+        "router_type": null,
+        "router_complexity": "trivial",
+        "confidence": 0.2581520974636078,
+        "routing_time_ms": 960.5391000004602,
+        "routing_path": "semantic->zeroshot",
+        "abstained": true,
+        "alternatives": [
+          {
+            "label": "documentation",
+            "score": 0.3377440571784973
+          },
+          {
+            "label": "analysis",
+            "score": 0.29980283975601196
+          },
+          {
+            "label": "code_generation",
+            "score": 0.29452431201934814
+          }
+        ]
+      }
+    },
+    "lmstudio": {
+      "success": true,
+      "response": "\n\n# JWT-Based API Authentication Flow Documentation\n\n## Overview\nJWT (JSON Web Token) is a stateless authentication mechanism where the client receives a token upon successful login. This token is used for subsequent requests to authenticate the user without relying on server-side session storage.\n\n---\n\n## Authentication Flow Steps\n\n### 1. **Client Sends Credentials**\n- **HTTP Method**: `POST`\n- **Endpoint**: `/api/auth/login` (or similar)\n- **Request Body**:\n  ```json\n  {\n    \"username\": \"user@example.com\",\n    \"password\": \"secure_password\"\n  }\n  ```\n- **Headers**: `Content-Type: application/json`\n\n### 2. **Server Validates Credentials**\n- The server checks the username/password against its database.\n- If valid, it proceeds to generate a JWT.\n\n### 3. **Generate and Return JWT**\n- **Claims Included in JWT**:\n  - `sub` (subject): User ID or identifier\n  - `exp` (expiration time): Token validity period\n  - `iss` (issuer): Server identifier\n  - `nbf` (not before): Optional timestamp for token activation\n  - Custom claims (e.g., role, permissions)\n- **Signing Algorithm**: Use symmetric (`HS256`) or asymmetric (`RS256`) signing.\n- **Response**:\n  ```http\n  HTTP/1.1 200 OK\n  Content-Type: application/json\n\n  {\n    \"",
+      "model_used": "qwen/qwen3-8b",
+      "timestamp": "2025-09-01T12:47:42.049826"
+    }
+  }
+]

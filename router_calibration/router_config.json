@@ -1,0 +1,13 @@
+{
+  "thresholds": {
+    "semantic_tau": 0.48,
+    "semantic_margin": 0.05,
+    "zeroshot_task": 0.45,
+    "zeroshot_complexity": 0.4
+  },
+  "performance_metrics": {
+    "task_types": 10,
+    "total_prototypes": 28
+  },
+  "model_name": "all-MiniLM-L6-v2"
+}

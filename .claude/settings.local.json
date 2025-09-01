@@ -17,7 +17,8 @@
       "mcp__lmstudio-omnibus__health",
       "mcp__lmstudio-omnibus__get_metrics",
       "mcp__context7__get-library-docs",
-      "Read(C:\\Users\\sscar\\claude-workspace\\cognitive-os\\core/**)"
+      "Read(C:\\Users\\sscar\\claude-workspace\\cognitive-os\\core/**)",
+      "Read(C:\\Users\\sscar\\.claude/**)"
     ],
     "deny": [],
     "ask": []

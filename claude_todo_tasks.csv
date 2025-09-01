@@ -1,0 +1,340 @@
+task_description,status,source,task_type,complexity
+Test m2m-ssh connection with simple JSON-RPC initialize request,completed,01c8734e-1300-4890-b,testing,simple
+Check if m2m server requires specific environment variables or configuration,completed,01c8734e-1300-4890-b,testing,simple
+Backup current server configuration,completed,01c8734e-1300-4890-b,general,simple
+Create minimal config with only fetch server,completed,01c8734e-1300-4890-b,configuration,simple
+Restart m2m SSH server with new config,in_progress,01c8734e-1300-4890-b,configuration,simple
+Test connection with simplified setup,pending,01c8734e-1300-4890-b,testing,simple
+Install Steam using winget,in_progress,02788f7b-420c-401c-8,configuration,simple
+Verify Steam installation,pending,02788f7b-420c-401c-8,testing,simple
+Update server config to include multiple MCP servers,completed,032d50cc-8881-4643-9,configuration,complex
+Restart m2m server with new configuration,completed,032d50cc-8881-4643-9,configuration,simple
+Test connection to multiple servers,in_progress,032d50cc-8881-4643-9,testing,complex
+Configure Claude to use the m2m-ssh server,pending,032d50cc-8881-4643-9,configuration,simple
+Create src/scanners directory structure for security scanning,completed,0718e1aa-5408-4786-9,general,simple
+Define SARIF v2.1.0 types and interfaces,completed,0718e1aa-5408-4786-9,general,simple
+Add LICENSE file (MIT),completed,0718e1aa-5408-4786-9,general,simple
+Update README with security scanning documentation,completed,0718e1aa-5408-4786-9,documentation,simple
+Implement base scanner adapter interface,completed,0718e1aa-5408-4786-9,general,simple
+Build npm-audit-adapter for dependency scanning (SCA),completed,0718e1aa-5408-4786-9,general,simple
+Build gitleaks-adapter for secrets detection,pending,0718e1aa-5408-4786-9,general,simple
+Build semgrep-adapter for TypeScript SAST,pending,0718e1aa-5408-4786-9,general,simple
+Implement SARIF normalizer for unified output,pending,0718e1aa-5408-4786-9,general,simple
+Build baseline engine for suppressing known issues,pending,0718e1aa-5408-4786-9,general,simple
+Build policy engine for severity thresholds,pending,0718e1aa-5408-4786-9,general,simple
+Add security_scan MCP tool to server-unified.ts,pending,0718e1aa-5408-4786-9,general,simple
+Create GitHub Actions security workflow,pending,0718e1aa-5408-4786-9,general,simple
+Add test fixtures with vulnerable code,completed,0718e1aa-5408-4786-9,testing,simple
+Write integration tests for security scanners,pending,0718e1aa-5408-4786-9,general,simple
+Optimize performance with parallelism and caching,pending,0718e1aa-5408-4786-9,refactoring,simple
+Curate TypeScript/JavaScript security rule packs,pending,0718e1aa-5408-4786-9,general,simple
+Add pre-commit hooks for security scanning,pending,0718e1aa-5408-4786-9,general,simple
+Copy local MCP server configs to remote,completed,0a000005-1b05-40ef-9,general,simple
+Update remote servers_config.json,completed,0a000005-1b05-40ef-9,configuration,simple
+Restart remote MCP SSH server,in_progress,0a000005-1b05-40ef-9,configuration,simple
+Test the new remote tools,pending,0a000005-1b05-40ef-9,testing,simple
+Improve tool descriptions to better guide agent selection,completed,0a2173fe-6f61-4c16-8,refactoring,simple
+Add lmstudio_generate convenience wrapper,completed,0a2173fe-6f61-4c16-8,general,simple
+Fix router bias to prefer LM Studio when available,completed,0a2173fe-6f61-4c16-8,debugging,simple
+Add better error handling and fallback messaging,completed,0a2173fe-6f61-4c16-8,debugging,simple
+Create git repository in Windows dev directory,completed,0a448311-271b-48e8-a,general,simple
+Set up .gitignore for node_modules and build directories,completed,0a448311-271b-48e8-a,general,simple
+Copy source files from WSL to Windows,completed,0a448311-271b-48e8-a,general,simple
+Install dependencies on Windows,completed,0a448311-271b-48e8-a,configuration,simple
+Build TypeScript project on Windows,completed,0a448311-271b-48e8-a,general,simple
+Test MCP server starts correctly on Windows,completed,0a448311-271b-48e8-a,testing,simple
+Search for MCP implementations with Lucid write capabilities,completed,0b30a388-cf88-4f97-8,general,simple
+Analyze existing Lucid MCP servers on GitHub,completed,0b30a388-cf88-4f97-8,analysis,simple
+Find implementations with document modification features,completed,0b30a388-cf88-4f97-8,documentation,simple
+Compare features and identify best options,in_progress,0b30a388-cf88-4f97-8,general,simple
+Search for task data in ~/.claude directory,completed,0d7c2ecc-030d-4dea-b,general,simple
+Extract and analyze historical tasks,completed,0d7c2ecc-030d-4dea-b,analysis,simple
+Generate router calibration data,completed,0d7c2ecc-030d-4dea-b,general,simple
+Calibrate router with real data,in_progress,0d7c2ecc-030d-4dea-b,general,simple
+Test calibrated router,pending,0d7c2ecc-030d-4dea-b,testing,simple
+Test Lucid MCP functionality,in_progress,0fc14919-6c54-4eed-8,testing,simple
+Install and configure OpenSSH Server on Windows 11,in_progress,16dfe660-f59f-4b82-a,configuration,simple
+Configure Windows Firewall for SSH access,pending,16dfe660-f59f-4b82-a,configuration,simple
+Set up SSH to start automatically,pending,16dfe660-f59f-4b82-a,general,simple
+Enable Wake-on-LAN in BIOS/UEFI settings,pending,16dfe660-f59f-4b82-a,general,simple
+Configure network adapter for Wake-on-LAN,completed,16dfe660-f59f-4b82-a,configuration,simple
+Verify SSH and WoL configuration,pending,16dfe660-f59f-4b82-a,testing,simple
+Configure Tailscale for SSH access,pending,16dfe660-f59f-4b82-a,configuration,simple
+Set up Wake-on-LAN over Tailscale,pending,16dfe660-f59f-4b82-a,general,simple
+Set up Gmail API authentication and credentials,completed,177e53cc-a20a-48d9-9,general,simple
+Create script to fetch sent emails from Gmail,completed,177e53cc-a20a-48d9-9,code_generation,simple
+Implement deduplication logic for similar emails,completed,177e53cc-a20a-48d9-9,general,simple
+Export deduplicated emails to archive format,completed,177e53cc-a20a-48d9-9,general,simple
+Test the complete workflow,completed,177e53cc-a20a-48d9-9,testing,simple
+Install gcloud CLI on Windows,completed,177e53cc-a20a-48d9-9,configuration,simple
+Create OAuth2 credentials in Google Cloud Console,completed,177e53cc-a20a-48d9-9,general,simple
+Test MCP server connection and functionality,in_progress,195fda4f-600e-4c71-9,testing,simple
+Kill all m2m-related processes on Mac,completed,19bab5cb-c04c-4b8f-9,general,simple
+Clean up m2m installation on Mac,completed,19bab5cb-c04c-4b8f-9,refactoring,simple
+Reinstall m2m server with uv on Mac,completed,19bab5cb-c04c-4b8f-9,general,simple
+Start fresh m2m server with minimal config,completed,19bab5cb-c04c-4b8f-9,configuration,simple
+Test connection from Windows,completed,19bab5cb-c04c-4b8f-9,testing,simple
+Fix uvx path in server config,in_progress,19bab5cb-c04c-4b8f-9,debugging,simple
+Update Claude config to use new port,pending,19bab5cb-c04c-4b8f-9,configuration,simple
+Test lmstudio-omnibus health check,completed,19f01907-3fc3-42ca-9,testing,simple
+Fix Unicode encoding issue in test script,completed,19f01907-3fc3-42ca-9,debugging,simple
+Verify intelligent routing functionality,in_progress,19f01907-3fc3-42ca-9,testing,simple
+Test multi-agent consensus query,pending,19f01907-3fc3-42ca-9,testing,simple
+Check SSH connectivity to remote server,completed,1eca40f1-940d-4aeb-b,testing,simple
+Verify MCP server is running on port 8022,in_progress,1eca40f1-940d-4aeb-b,testing,simple
+Test MCP server response,pending,1eca40f1-940d-4aeb-b,testing,simple
+Identify optimal 7B models for RTX 4080 Super dual allocation,completed,1ed4a7c5-442a-4be3-9,general,simple
+Download Qwen2.5-Coder 7B and Qwen2.5 7B Instruct,in_progress,1ed4a7c5-442a-4be3-9,general,simple
+Test actual VRAM usage of selected models,pending,1ed4a7c5-442a-4be3-9,testing,simple
+Configure dual model orchestra setup,pending,1ed4a7c5-442a-4be3-9,configuration,simple
+Fix 1Password integration to work locally only,in_progress,215a7e33-8506-4226-8,debugging,simple
+Test the updated setup script,pending,215a7e33-8506-4226-8,testing,simple
+Check current Tailscale status on router,completed,218685b2-63f8-4e9e-a,testing,simple
+Enable IP forwarding and subnet routing on router,completed,218685b2-63f8-4e9e-a,general,simple
+Configure Tailscale subnet routes for LAN,completed,218685b2-63f8-4e9e-a,configuration,simple
+Set up exit node functionality on router,completed,218685b2-63f8-4e9e-a,general,simple
+Configure firewall rules for Tailscale traffic,completed,218685b2-63f8-4e9e-a,configuration,simple
+Document network configuration for other devices,completed,218685b2-63f8-4e9e-a,documentation,simple
+Check current network configuration and interfaces,completed,238c40c1-23da-427d-a,testing,simple
+Test IPv4 connectivity to gateway and external hosts,completed,238c40c1-23da-427d-a,testing,simple
+Analyze routing table for IPv4,completed,238c40c1-23da-427d-a,analysis,simple
+Check for VLAN tagging issues,completed,238c40c1-23da-427d-a,testing,simple
+Test direct connectivity to target machine,completed,238c40c1-23da-427d-a,testing,simple
+Add proper Unicode support for Windows,completed,243d404a-6802-48d5-9,general,simple
+Update launcher with encoding fixes,completed,243d404a-6802-48d5-9,general,simple
+Restore emoji and Unicode characters,completed,243d404a-6802-48d5-9,general,simple
+Test Unicode support,in_progress,243d404a-6802-48d5-9,testing,simple
+Check how thinking models handle responses in the code,completed,2a97cf49-a586-444a-9,testing,simple
+Fix empty response issue for thinking models,completed,2a97cf49-a586-444a-9,debugging,simple
+Test all 4 thinking instances return '4',in_progress,2a97cf49-a586-444a-9,testing,simple
+Analyze current routing pipeline for bottlenecks,completed,2d2268b9-13c0-49a7-8,analysis,simple
+Design parallel processing architecture,completed,2d2268b9-13c0-49a7-8,system_design,complex
+Implement connection pooling for LM Studio,completed,2d2268b9-13c0-49a7-8,general,simple
+Add predictive preloading for likely agents,completed,2d2268b9-13c0-49a7-8,general,simple
+Optimize model warm-up and context switching,completed,2d2268b9-13c0-49a7-8,refactoring,simple
+Update GAIA repo with GAIA2 production framework,completed,301df31a-8fbb-45b6-b,general,complex
+Ensure AIOS has clean repository setup,completed,301df31a-8fbb-45b6-b,testing,simple
+Verify repository states are correct,completed,301df31a-8fbb-45b6-b,testing,simple
+Create new unified cognitive ops platform repository,completed,301df31a-8fbb-45b6-b,general,simple
+Solicit prototype design from LM Studio model,in_progress,301df31a-8fbb-45b6-b,general,simple
+Scaffold closed-loop cognitive ops architecture,pending,301df31a-8fbb-45b6-b,general,complex
+Check if OpenSSH Server is installed,completed,3050df84-0975-485b-9,testing,simple
+Install OpenSSH Server,completed,3050df84-0975-485b-9,configuration,simple
+Verify SSH service status,completed,3050df84-0975-485b-9,testing,simple
+Check Windows Firewall rules for SSH,completed,3050df84-0975-485b-9,testing,simple
+Test SSH configuration,completed,3050df84-0975-485b-9,testing,simple
+Check if 1Password CLI (op) is installed,completed,30ea1db4-ee56-4e14-b,testing,simple
+Sign in to 1Password if needed,completed,30ea1db4-ee56-4e14-b,general,simple
+Create item with Azure OpenAI credentials,in_progress,30ea1db4-ee56-4e14-b,general,simple
+Install m2m-mcp-server-ssh-client using uv,in_progress,31ef178a-5cbe-4bc0-8,configuration,simple
+Test the SSH connection after installation,pending,31ef178a-5cbe-4bc0-8,testing,simple
+Check if plugin is being loaded by G-Assist,completed,35f7e318-43cc-4c94-b,testing,simple
+Verify manifest.json is correct,completed,35f7e318-43cc-4c94-b,testing,simple
+Check plugin executable path,completed,35f7e318-43cc-4c94-b,testing,simple
+Test with correct invocation syntax,in_progress,35f7e318-43cc-4c94-b,testing,simple
+Check G-Assist logs for plugin loading errors,pending,35f7e318-43cc-4c94-b,testing,simple
+Verify plugin is registered in G-Assist,pending,35f7e318-43cc-4c94-b,testing,simple
+Analyze current MCP server capabilities for code evaluation,completed,368c6970-aa4f-4c48-9,analysis,simple
+Research code analysis patterns and repository evaluation techniques,completed,368c6970-aa4f-4c48-9,general,simple
+Design new tools for directory/repository analysis,completed,368c6970-aa4f-4c48-9,general,simple
+Implement code parsing and AST analysis features,completed,368c6970-aa4f-4c48-9,code_generation,simple
+Add repository metrics and insights generation,completed,368c6970-aa4f-4c48-9,general,simple
+Create documentation summarization capabilities,completed,368c6970-aa4f-4c48-9,general,simple
+Build and test the updated server,completed,368c6970-aa4f-4c48-9,testing,simple
+Find available Python installation on Windows,in_progress,37c6c4d4-4f43-4a31-a,general,simple
+Update MCP client configuration with correct Python path,pending,37c6c4d4-4f43-4a31-a,general,simple
+Add VRAM tracking to model manager,in_progress,392f86d8-74d9-4b33-9,general,simple
+Implement smart model loading based on available VRAM,pending,392f86d8-74d9-4b33-9,general,simple
+Create model unloading suggestions when VRAM is insufficient,pending,392f86d8-74d9-4b33-9,general,simple
+Add VRAM usage reporting to status commands,pending,392f86d8-74d9-4b33-9,general,simple
+Test multi-model loading within VRAM limits,pending,392f86d8-74d9-4b33-9,testing,simple
+Design prompt router architecture,completed,3a2c82d6-ef40-41d7-8,system_design,complex
+Install and configure Ollama with lightweight model,completed,3a2c82d6-ef40-41d7-8,configuration,simple
+Create system prompt templates for different agents,completed,3a2c82d6-ef40-41d7-8,general,simple
+Build the routing service,completed,3a2c82d6-ef40-41d7-8,general,simple
+Test the complete pipeline,pending,3a2c82d6-ef40-41d7-8,testing,simple
+Fine-tune the classification prompt for better accuracy,completed,3c44697a-733b-4542-8,general,simple
+Pull phi3:mini model from Ollama,completed,3c44697a-733b-4542-8,general,simple
+Create benchmark script to compare models,completed,3c44697a-733b-4542-8,code_generation,simple
+Run comparison tests between tinyllama and phi3:mini,completed,3c44697a-733b-4542-8,general,simple
+Analyze results and make recommendation,completed,3c44697a-733b-4542-8,analysis,simple
+Explore Applications and Such folder for early professional writing (2012-2013),completed,44e3f90e-71ae-4f79-b,general,simple
+Copy identified professional writing samples to ChatRTX folder,in_progress,44e3f90e-71ae-4f79-b,general,simple
+Navigate to Authentik directory and start services,in_progress,4623902c-c43a-4546-a,general,simple
+Verify services are running,pending,4623902c-c43a-4546-a,testing,simple
+Check Authentik web interface availability,pending,4623902c-c43a-4546-a,testing,simple
+Check Windows network adapters and IP configuration,completed,477fd144-f5fc-40c5-9,testing,simple
+Test connectivity to 192.168.50.5 and 192.168.50.1,completed,477fd144-f5fc-40c5-9,testing,simple
+Check routing table for 192.168.50.x network,completed,477fd144-f5fc-40c5-9,testing,simple
+Verify if Windows firewall or network settings are blocking,in_progress,477fd144-f5fc-40c5-9,testing,simple
+Explore the codebase to understand the LM Studio MCP server setup,completed,4eef32a2-21c4-4516-8,configuration,simple
+Test the LM Studio MCP server functionality,in_progress,4eef32a2-21c4-4516-8,testing,simple
+Verify the server can communicate with itself,pending,4eef32a2-21c4-4516-8,testing,simple
+Create Chunk 1: Cold Open & Title (lines 1-55),completed,5595284c-59a1-4f72-b,general,simple
+Create Chunk 2: Act One - Senate/Sejanus scenes (lines 56-177),completed,5595284c-59a1-4f72-b,general,simple
+Create Chunk 3: Act One - Sejanus Villa & Flashbacks (lines 178-301),completed,5595284c-59a1-4f72-b,general,simple
+Create Chunk 4: Act Two - Pilate's Quarters & Imperial Palace (lines 302-529),completed,5595284c-59a1-4f72-b,general,simple
+Create Chunk 5: Act Three - Temple & Claudia's Chambers (lines 530-677),completed,5595284c-59a1-4f72-b,general,simple
+Create Chunk 6: Act Three - Departure & Closing (lines 678-892),completed,5595284c-59a1-4f72-b,general,simple
+Search for PostgreSQL packages in winget,completed,58c078e9-3fec-4293-9,general,simple
+Install PostgreSQL with psql,completed,58c078e9-3fec-4293-9,configuration,simple
+Verify installation,in_progress,58c078e9-3fec-4293-9,testing,simple
+Investigate Lucid MCP server configuration and API key,completed,5d18f16f-a04e-400f-a,analysis,simple
+Check Lucid API key permissions and format,completed,5d18f16f-a04e-400f-a,testing,simple
+Fix Lucid MCP connection issues,in_progress,5d18f16f-a04e-400f-a,debugging,simple
+Test SQLite MCP server connection,completed,65fbc66f-6c63-4ae5-8,testing,simple
+Query available tables in the database,in_progress,65fbc66f-6c63-4ae5-8,general,simple
+Test basic SQL operations,pending,65fbc66f-6c63-4ae5-8,testing,simple
+Create test script for Google Drive storage,completed,66a15a94-0278-40e1-9,code_generation,simple
+Check environment configuration,completed,66a15a94-0278-40e1-9,testing,simple
+Test service account authentication,completed,66a15a94-0278-40e1-9,testing,simple
+Test upload functionality,completed,66a15a94-0278-40e1-9,testing,simple
+Test folder organization,completed,66a15a94-0278-40e1-9,testing,simple
+Test search and download,completed,66a15a94-0278-40e1-9,testing,simple
+Estimate final archive size and performance,completed,67a1bac4-2983-4526-b,general,simple
+Remove ChatGPT 'Copy' and 'Edit' text from code blocks,in_progress,693bee0b-b49a-4d0a-8,general,simple
+Fix code block formatting issues,pending,693bee0b-b49a-4d0a-8,debugging,simple
+Check the MCP configuration file for filesystem server settings,completed,6b1d4d4d-c80a-4b51-9,testing,simple
+Test the filesystem server command directly,completed,6b1d4d4d-c80a-4b51-9,testing,simple
+Check for path and permission issues,in_progress,6b1d4d4d-c80a-4b51-9,testing,simple
+Restart or reconfigure the filesystem server,pending,6b1d4d4d-c80a-4b51-9,configuration,simple
+Research and add vision model support to backend router,completed,6dabbb14-8c4b-48ff-9,general,simple
+Create image analysis tool for vision queries,completed,6dabbb14-8c4b-48ff-9,general,simple
+Add image input handling to existing tools,completed,6dabbb14-8c4b-48ff-9,general,simple
+Test vision model integration,completed,6dabbb14-8c4b-48ff-9,testing,simple
+Update code to handle thinking model responses properly,completed,7017b1db-a35f-4044-a,general,simple
+Add proper streaming/completion for thinking models,completed,7017b1db-a35f-4044-a,general,simple
+Test that all 4 instances return just '4',in_progress,7017b1db-a35f-4044-a,testing,simple
+Implement Golden Bus for deterministic observability,pending,7dee81c4-35e9-486a-8,general,simple
+Create cognitive flywheel implementation,pending,7dee81c4-35e9-486a-8,general,simple
+Remove hardcoded Oracle password from oracle_config.py,completed,7f3177d1-5588-4a61-a,general,simple
+Update requirements.txt with Google Drive dependencies,completed,7f3177d1-5588-4a61-a,general,simple
+Implement chunked upload support for large RAW files,completed,7f3177d1-5588-4a61-a,general,simple
+Add retry logic with exponential backoff to Google Drive operations,completed,7f3177d1-5588-4a61-a,general,simple
+Create service account setup documentation,completed,7f3177d1-5588-4a61-a,configuration,simple
+Test the changes and prepare for commit,completed,7f3177d1-5588-4a61-a,testing,simple
+Install mcpm directly in WSL,completed,81dc0771-34ee-4967-9,configuration,simple
+Configure MCP servers directly in codex config,in_progress,81dc0771-34ee-4967-9,configuration,simple
+Test individual server connectivity,pending,81dc0771-34ee-4967-9,testing,simple
+Fix uvx PATH issue for server,in_progress,82a421dc-1697-41b6-b,debugging,simple
+Create recursive self-improvement orchestrator,completed,867f405f-2f24-4492-a,general,simple
+Implement code analysis workflows,completed,867f405f-2f24-4492-a,code_generation,simple
+Build self-modification system,completed,867f405f-2f24-4492-a,general,simple
+Test recursive enhancement,in_progress,867f405f-2f24-4492-a,testing,simple
+Investigate the current MCP server setup and error,completed,87e8e21c-7471-4dd0-a,debugging,simple
+Create proper development directory structure,in_progress,87e8e21c-7471-4dd0-a,general,simple
+Move and fix the Gemini MCP server,pending,87e8e21c-7471-4dd0-a,debugging,simple
+Update Claude configuration to point to new location,pending,87e8e21c-7471-4dd0-a,general,simple
+Diagnose IPv4 connectivity issue to 192.168.50.x network,completed,88891269-f5a1-4664-a,debugging,simple
+Check Windows Firewall rules for IPv4 blocking,completed,88891269-f5a1-4664-a,testing,simple
+Test if Tailscale is interfering with IPv4 routing,completed,88891269-f5a1-4664-a,testing,simple
+Verify network adapter binding and priority,completed,88891269-f5a1-4664-a,testing,simple
+Fix IPv4 connectivity issue,completed,88891269-f5a1-4664-a,debugging,simple
+Check web-search server log for errors,completed,91372581-f754-4a58-a,testing,simple
+Verify the build output exists and is correct,completed,91372581-f754-4a58-a,testing,simple
+Test Google search scraping logic,completed,91372581-f754-4a58-a,testing,simple
+Fix the search implementation,completed,91372581-f754-4a58-a,debugging,simple
+Fix DuckDuckGo redirect URLs,completed,91372581-f754-4a58-a,debugging,simple
+Wire SEMANTICS TLV (0x0009) and update codec,in_progress,9499abbc-41fb-4556-a,general,simple
+Define FS/HTTP effect lattices and implement Tier-0 checker,pending,9499abbc-41fb-4556-a,general,simple
+Create golden corpus descriptors with SEMANTICS,pending,9499abbc-41fb-4556-a,general,simple
+Implement abstract refinement checker,pending,9499abbc-41fb-4556-a,general,simple
+Update registry with semantic indexing,pending,9499abbc-41fb-4556-a,general,simple
+Run validation tests and generate proofs,pending,9499abbc-41fb-4556-a,general,simple
+Fix Docker container issues,completed,98e40ab5-7870-40a9-b,debugging,simple
+Build MCP server image,completed,98e40ab5-7870-40a9-b,general,simple
+Deploy Authentik successfully,pending,98e40ab5-7870-40a9-b,configuration,simple
+Deploy Traefik with MCP servers,in_progress,98e40ab5-7870-40a9-b,configuration,simple
+Analyze lmstudio-multi advanced features and tools,completed,9a1802f1-923a-49b4-9,analysis,complex
+Analyze lmstudio-local advanced features and tools,completed,9a1802f1-923a-49b4-9,analysis,complex
+Analyze lmstudio-intelligent advanced features and tools,completed,9a1802f1-923a-49b4-9,analysis,complex
+Test advanced capabilities across all servers,completed,9a1802f1-923a-49b4-9,testing,complex
+Create structured component database,in_progress,9a1802f1-923a-49b4-9,code_generation,simple
+Identify best-in-class components for each category,pending,9a1802f1-923a-49b4-9,general,simple
+Check local machine DNS settings,completed,a3d35ccc-0647-43f0-a,testing,simple
+Check router DNS settings,in_progress,a3d35ccc-0647-43f0-a,testing,simple
+Verify DNS resolution is working,pending,a3d35ccc-0647-43f0-a,testing,simple
+Check m2m-ssh server status in Claude,completed,adbd21c1-f6f1-497b-b,testing,simple
+Verify SSH server is running on Mac,in_progress,adbd21c1-f6f1-497b-b,testing,simple
+Test network connectivity to Mac,pending,adbd21c1-f6f1-497b-b,testing,simple
+Check known_hosts configuration,pending,adbd21c1-f6f1-497b-b,testing,simple
+Test manual connection with uvx,pending,adbd21c1-f6f1-497b-b,testing,simple
+Create metadata JSON file for ML training,completed,ae3536a4-70e9-4be1-b,general,simple
+Create train/validation/test split directories,completed,ae3536a4-70e9-4be1-b,testing,simple
+Generate dataset statistics and summary,completed,ae3536a4-70e9-4be1-b,general,simple
+Create prompt-completion pairs for fine-tuning,completed,ae3536a4-70e9-4be1-b,general,simple
+Create README for dataset documentation,completed,ae3536a4-70e9-4be1-b,documentation,simple
+Test Gemini API with real API key,in_progress,b47dfc71-dd77-4b00-9,testing,simple
+Verify API integration is working correctly,pending,b47dfc71-dd77-4b00-9,testing,simple
+Extract task implementations from cognitive model responses,completed,bcc37563-a3e1-414d-b,general,simple
+Task 1: Unified config system → qwen/qwen2.5-coder-14b,completed,bcc37563-a3e1-414d-b,configuration,simple
+Task 2: Real provider kernel → qwen/qwen2.5-coder-14b,in_progress,bcc37563-a3e1-414d-b,general,simple
+Task 3: Production MCP interface → qwen/qwen2.5-coder-14b,pending,bcc37563-a3e1-414d-b,general,complex
+Task 4: Learning integration → qwen/qwen2.5-coder-14b,pending,bcc37563-a3e1-414d-b,general,simple
+Test the updated LMStudio-MCP server implementation,in_progress,c5426ddc-5cf0-484d-b,testing,simple
+Create backup analysis function,completed,c6fb8853-7554-4f48-a,code_generation,simple
+Integrate LM Studio MCP for summarization,completed,c6fb8853-7554-4f48-a,integration,simple
+Add to cleanup.sh as new option,completed,c6fb8853-7554-4f48-a,general,simple
+Test the MCP integration workflow,in_progress,c6fb8853-7554-4f48-a,testing,simple
+Analyze codebase for Linux-specific dependencies and paths,completed,c9494a46-f4cf-47d9-9,analysis,simple
+Fix hardcoded Linux paths in Python files,completed,c9494a46-f4cf-47d9-9,debugging,simple
+Create Windows PowerShell equivalents for shell scripts,completed,c9494a46-f4cf-47d9-9,general,simple
+Update font handling for Windows compatibility,completed,c9494a46-f4cf-47d9-9,general,simple
+Fix path separator issues using pathlib,completed,c9494a46-f4cf-47d9-9,debugging,simple
+Test database connections on Windows,completed,c9494a46-f4cf-47d9-9,testing,simple
+Create platform-specific configuration system,completed,c9494a46-f4cf-47d9-9,general,simple
+Examine existing Gemini plugin implementation,completed,c97a21d0-fefa-4e83-9,analysis,simple
+Understand G-Assist's certainty/confidence mechanisms,completed,c97a21d0-fefa-4e83-9,general,simple
+Design certainty-based routing logic,completed,c97a21d0-fefa-4e83-9,general,simple
+Create enhanced Gemini plugin with auto-fallback,completed,c97a21d0-fefa-4e83-9,general,simple
+Set up configuration and API keys,completed,c97a21d0-fefa-4e83-9,general,simple
+Test the plugin integration,completed,c97a21d0-fefa-4e83-9,testing,simple
+SSH into sam@macbookprom2.scarrow.lan,completed,cec9e7af-3b7d-4168-8,general,simple
+Navigate to ~/dev/forks/ directory,completed,cec9e7af-3b7d-4168-8,general,simple
+Check if m2m-mcp-server-ssh-server directory exists,completed,cec9e7af-3b7d-4168-8,testing,simple
+Assess the running state of the server,completed,cec9e7af-3b7d-4168-8,analysis,simple
+Identify any failures or issues,completed,cec9e7af-3b7d-4168-8,general,simple
+Fix the broken PATH environment,in_progress,cec9e7af-3b7d-4168-8,debugging,simple
+Update Python version for the project,pending,cec9e7af-3b7d-4168-8,general,simple
+Reinstall dependencies with newer Python,pending,cec9e7af-3b7d-4168-8,general,simple
+Start the m2m-mcp-server-ssh-server,pending,cec9e7af-3b7d-4168-8,general,simple
+Check if Azure CLI is installed,completed,cfbd60dd-0afe-4312-a,testing,simple
+Install Azure CLI if needed,completed,cfbd60dd-0afe-4312-a,configuration,simple
+Authenticate with Azure using student account,in_progress,cfbd60dd-0afe-4312-a,general,simple
+Verify access and list available subscriptions,pending,cfbd60dd-0afe-4312-a,testing,simple
+Set up service principal for programmatic access (if needed),pending,cfbd60dd-0afe-4312-a,general,simple
+Review current chapel service fee structure,completed,d26e301e-e4fe-444e-8,analysis,simple
+Create script to add audio support fee to configuration,completed,d26e301e-e4fe-444e-8,code_generation,simple
+Add $25 audio support fee to configuration,in_progress,d26e301e-e4fe-444e-8,general,simple
+Update chapel service forms to include audio fee,pending,d26e301e-e4fe-444e-8,general,simple
+Test fee calculations with new audio fee,pending,d26e301e-e4fe-444e-8,testing,simple
+Review current implementation structure and identify issues,completed,d541c9a2-1753-4291-9,analysis,simple
+Fix type handling issues mentioned in test results,completed,d541c9a2-1753-4291-9,debugging,simple
+Add Ollama provider implementation,completed,d541c9a2-1753-4291-9,general,simple
+Add OpenAI provider implementation,completed,d541c9a2-1753-4291-9,general,simple
+Add Anthropic provider implementation,completed,d541c9a2-1753-4291-9,general,simple
+Create comprehensive integration tests,completed,d541c9a2-1753-4291-9,general,complex
+Add provider health checks and monitoring,completed,d541c9a2-1753-4291-9,general,simple
+Implement provider-specific configuration validation,completed,d541c9a2-1753-4291-9,general,simple
+Add documentation and usage examples,pending,d541c9a2-1753-4291-9,general,simple
+Check primary server connectivity,completed,d9e7a4ea-2e55-430e-8,testing,simple
+Check Mac server connectivity,completed,d9e7a4ea-2e55-430e-8,testing,simple
+Restart LM Studio if needed,completed,d9e7a4ea-2e55-430e-8,configuration,simple
+Verify servers are healthy,in_progress,d9e7a4ea-2e55-430e-8,testing,simple
+Try alternative connection methods and check Tailscale interference,completed,da2a7f5d-5cb3-415e-a,testing,simple
+Install lmstudio-omnibus using claude mcp add-json command,completed,e02aff6a-e367-4fa7-9,configuration,simple
+Diagnose why omnibus tools aren't available,in_progress,e02aff6a-e367-4fa7-9,general,simple
+SSH into samscarrow@sams-macbook-pro.scarrow.lan,in_progress,e33fefc0-9679-49ae-9,general,simple
+Check system logs for crash information,pending,e33fefc0-9679-49ae-9,testing,simple
+Review diagnostic reports and crash dumps,pending,e33fefc0-9679-49ae-9,analysis,simple
+Analyze system resource usage and potential issues,pending,e33fefc0-9679-49ae-9,analysis,simple
+Search for existing approval patterns in codebase,completed,e51781d3-2424-43d8-a,general,simple
+Analyze current status fields and workflows,completed,e51781d3-2424-43d8-a,analysis,simple
+Design pragmatic approval system architecture,in_progress,e51781d3-2424-43d8-a,system_design,complex
+Document API surface and operations,pending,e51781d3-2424-43d8-a,documentation,simple
+Add confidence scores and metadata to routing decisions,completed,e91dd92e-960c-49fe-8,general,simple
+Implement session tracking and conversation history,completed,e91dd92e-960c-49fe-8,general,simple
+Create feedback loop for routing improvements,completed,e91dd92e-960c-49fe-8,general,simple
+Add hierarchical routing (broad to specific categories),completed,e91dd92e-960c-49fe-8,general,simple
+Build user preference storage system,completed,e91dd92e-960c-49fe-8,general,simple
+Add dynamic model discovery for parallel querying,in_progress,e9a236e3-df64-40eb-8,general,simple
