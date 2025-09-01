@@ -1,7 +1,23 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "mcp__lmstudio-multi__discover_loaded_models",
+      "mcp__lmstudio-multi__chat_with_model",
+      "mcp__lmstudio-local__chat_completion",
+      "mcp__lmstudio-multi__multi_chat_completion",
+      "mcp__lmstudio-omnibus__query",
+      "mcp__lmstudio-intelligent__intelligent_route_request",
+      "Read(C:\\Users\\sscar\\claude-workspace\\workshop\\lmstudio-omnibus/**)",
+      "Read(C:\\Users\\sscar\\claude-workspace\\workshop\\lmstudio-omnibus\\src/**)",
+      "Read(C:\\Users\\sscar\\claude-workspace\\workshop\\lmstudio-omnibus\\docs/**)",
+      "Read(C:\\Users\\sscar\\claude-workspace\\workshop\\cognitive-platform/**)",
+      "Read(C:\\Users\\sscar\\claude-workspace\\workshop\\cognitive-platform\\cognitive_core/**)",
+      "Read(C:\\Users\\sscar\\claude-workspace\\workshop\\cognitive-platform\\unified/**)",
+      "mcp__lmstudio-omnibus__health",
+      "mcp__lmstudio-omnibus__get_metrics",
+      "mcp__context7__get-library-docs",
+      "Read(C:\\Users\\sscar\\claude-workspace\\cognitive-os\\core/**)"
     ],
     "deny": [],
     "ask": []

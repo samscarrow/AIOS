@@ -1,0 +1,161 @@
+{
+  "name": "orchestration-reasoning",
+  "version": "1.0.0",
+  "description": "Strategic orchestration and collaborative reasoning tools for LMStudio agents",
+  "server": {
+    "type": "python",
+    "module": "orchestration_mcp_server",
+    "class": "OrchestrationMCPServer"
+  },
+  "tools": [
+    {
+      "name": "initiate_reasoning_session",
+      "description": "Start a new collaborative reasoning session that multiple agents can contribute to",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "task_description": {
+            "type": "string",
+            "description": "Description of the task or problem to reason about"
+          },
+          "agent_name": {
+            "type": "string", 
+            "description": "Your agent name for identification"
+          },
+          "tags": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Optional tags for categorizing this session"
+          }
+        },
+        "required": ["task_description", "agent_name"]
+      }
+    },
+    {
+      "name": "add_reasoning_step", 
+      "description": "Add your reasoning contribution to an existing session",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "ID of the reasoning session"
+          },
+          "agent_name": {
+            "type": "string",
+            "description": "Your agent name"
+          },
+          "reasoning_text": {
+            "type": "string", 
+            "description": "Your reasoning content or analysis"
+          },
+          "step_type": {
+            "type": "string",
+            "enum": ["analysis", "hypothesis", "conclusion", "critique", "synthesis"],
+            "description": "Type of reasoning step"
+          }
+        },
+        "required": ["session_id", "agent_name", "reasoning_text"]
+      }
+    },
+    {
+      "name": "execute_orchestrated_decision",
+      "description": "Execute strategic orchestration using the accumulated reasoning",
+      "parameters": {
+        "type": "object", 
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "description": "ID of the reasoning session"
+          },
+          "agent_name": {
+            "type": "string",
+            "description": "Your agent name"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "The prompt to orchestrate execution on"
+          },
+          "task_type": {
+            "type": "string",
+            "enum": ["code", "reasoning", "analysis", "general", "creative"],
+            "description": "Type of task for optimal orchestration"
+          }
+        },
+        "required": ["session_id", "agent_name", "prompt"]
+      }
+    },
+    {
+      "name": "get_reasoning_session",
+      "description": "Retrieve a reasoning session with full history and results",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string", 
+            "description": "ID of the reasoning session to retrieve"
+          },
+          "agent_name": {
+            "type": "string",
+            "description": "Your agent name"
+          }
+        },
+        "required": ["session_id", "agent_name"]
+      }
+    },
+    {
+      "name": "search_reasoning_sessions",
+      "description": "Search for previous reasoning sessions by various criteria",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "agent_name": {
+            "type": "string",
+            "description": "Your agent name"
+          },
+          "query": {
+            "type": "string",
+            "description": "Text to search for in task descriptions"
+          },
+          "tags": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Filter by tags"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["reasoning", "decided", "executed", "failed"],
+            "description": "Filter by session status"
+          },
+          "limit": {
+            "type": "integer",
+            "default": 10,
+            "description": "Maximum number of results"
+          }
+        },
+        "required": ["agent_name"]
+      }
+    },
+    {
+      "name": "get_orchestration_capabilities",
+      "description": "Get information about available orchestration models and strategies",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "agent_name": {
+            "type": "string",
+            "description": "Your agent name"
+          }
+        },
+        "required": ["agent_name"]
+      }
+    }
+  ],
+  "capabilities": {
+    "collaborative_reasoning": true,
+    "persistent_sessions": true,
+    "multi_agent_access": true,
+    "strategic_orchestration": true,
+    "memory_sharing": true
+  }
+}

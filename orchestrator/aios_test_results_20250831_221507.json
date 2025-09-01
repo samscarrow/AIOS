@@ -1,0 +1,132 @@
+{
+  "test_summary": {
+    "scenarios_run": 5,
+    "total_duration": 76.3613851070404,
+    "success_rate": 1.0,
+    "average_duration_per_scenario": 15.272277021408081
+  },
+  "performance_metrics": {
+    "total_tokens_generated": 4907,
+    "tokens_per_second": 64.26022777247374,
+    "models_utilized": [
+      "qwen/qwen2.5-coder-14b"
+    ],
+    "average_quality_score": 0.6333333333333333
+  },
+  "capability_analysis": {
+    "basic_reasoning": true,
+    "collaborative_analysis": true,
+    "complex_problem_solving": true,
+    "code_generation": true,
+    "strategic_planning": true
+  },
+  "detailed_results": [
+    {
+      "scenario": "Basic Reasoning",
+      "duration": 18.93132519721985,
+      "stream_id": "ts_2b90138e",
+      "tokens_used": 1148,
+      "model_used": [
+        "qwen/qwen2.5-coder-14b"
+      ],
+      "success": true,
+      "complexity_score": 1.0,
+      "analysis_points": [
+        "Single agent reasoning capability",
+        "Algorithm analysis accuracy",
+        "Response coherence and structure",
+        "Token efficiency for simple tasks"
+      ]
+    },
+    {
+      "scenario": "Collaborative Analysis",
+      "duration": 11.371850490570068,
+      "stream_id": "ts_593106ff",
+      "agents_involved": [
+        "SystemArchitect",
+        "PerformanceEngineer",
+        "SecurityExpert",
+        "SolutionSynthesizer"
+      ],
+      "collaboration_depth": 3,
+      "tokens_used": 763,
+      "model_used": [
+        "qwen/qwen2.5-coder-14b"
+      ],
+      "success": true,
+      "synthesis_quality": 0.3333333333333333,
+      "analysis_points": [
+        "Multi-agent collaboration effectiveness",
+        "Perspective diversity integration",
+        "Knowledge synthesis capability",
+        "Attention management across agents"
+      ]
+    },
+    {
+      "scenario": "Complex Problem Solving",
+      "duration": 16.562914848327637,
+      "stream_id": "ts_617f572f",
+      "problem_complexity": "high",
+      "domain_breadth": 4,
+      "tokens_used": 1085,
+      "model_used": [
+        "qwen/qwen2.5-coder-14b"
+      ],
+      "success": true,
+      "architectural_depth": 0.4666666666666667,
+      "analysis_points": [
+        "Complex system design capability",
+        "Multi-domain knowledge integration",
+        "Scalability requirement handling",
+        "Technical feasibility assessment"
+      ]
+    },
+    {
+      "scenario": "Code Generation Chain",
+      "duration": 13.612923860549927,
+      "stream_id": "ts_5d575d4a",
+      "code_quality_factors": [
+        "thread-safety",
+        "security",
+        "performance",
+        "maintainability"
+      ],
+      "review_rounds": 2,
+      "tokens_used": 886,
+      "model_used": [
+        "qwen/qwen2.5-coder-14b"
+      ],
+      "success": true,
+      "code_completeness": 0.5,
+      "analysis_points": [
+        "Code generation accuracy",
+        "Security consideration integration",
+        "Performance optimization inclusion",
+        "Review feedback incorporation"
+      ]
+    },
+    {
+      "scenario": "Strategic Planning",
+      "duration": 15.882370710372925,
+      "stream_id": "ts_398f0fc6",
+      "strategic_depth": "enterprise-level",
+      "stakeholder_perspectives": 3,
+      "tokens_used": 1025,
+      "model_used": [
+        "qwen/qwen2.5-coder-14b"
+      ],
+      "success": true,
+      "strategic_completeness": 0.8666666666666667,
+      "analysis_points": [
+        "Strategic thinking capability",
+        "Multi-stakeholder consideration",
+        "Risk-aware planning",
+        "Implementation feasibility"
+      ]
+    }
+  ],
+  "recommendations": [
+    "System demonstrates strong multi-agent collaboration capabilities",
+    "Consider implementing caching for frequently accessed thought streams"
+  ]
+}
